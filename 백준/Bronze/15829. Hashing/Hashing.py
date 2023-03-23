@@ -4,7 +4,7 @@ def convert(string):
     for i in range(97,124):
         alpha_to_num[chr(i)] = i-96
     for i in range(len(string)):
-        number += alpha_to_num[string[i]]*(31**i)
+        number += (alpha_to_num[string[i]]*(31**i)) % 1234567891
     return number
 
 if __name__ == '__main__':
